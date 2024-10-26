@@ -1,0 +1,23 @@
+create database bd_loja_veiculo;
+use bd_loja_veiculo;
+create table tb_veiculos(
+id int auto_increment primary key,
+modelo varchar(100) not null,
+placa varchar(7) not null,
+ano date not null,
+preco decimal(10, 2) not null 
+);
+insert into tb_veiculos (modelo, placa, ano, preco)
+values
+('celta', 'qcv6699', '2024-01-01', 30000.00);
+
+create table tb_usuarios (
+id_usuarios int auto_increment primary key,
+usuario varchar(255) unique not null,
+senha varchar(4) not null
+);
+insert into tb_usuarios (usuario, senha)
+values
+('diogo_holanda', '1234');
+select * from tb_usuarios;
+select * from tb_veiculos;
