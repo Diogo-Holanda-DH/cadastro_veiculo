@@ -1,12 +1,12 @@
 <?php
 // confirmar.php
-$modelo = $_GET['cod'];
+$id = $_GET['cod'];
 echo "
         <h1> Tem certeza que deseja
-             excluir o item nº $modelo?
+             excluir o item nº $id?
         </h1>
         <br><br>
-        <a href='deletar.php?cod=$modelo'>
+        <a href='deletar.php?cod=$id'>
             Sim
         </a>
         <br><br>

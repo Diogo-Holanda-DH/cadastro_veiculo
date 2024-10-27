@@ -15,7 +15,7 @@ try{
     $deletar->execute();
     echo "Deletado com sucesso!";
 }catch(PDOException $erro){
-    echo "Falha ao deletar!" .$erro->getMessage();
+    echo "Falha ao deletar!" ;$erro->getMessage();
 }
 
 ?>

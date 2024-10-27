@@ -44,7 +44,9 @@ try{
                 Placa: $placa <br>
                 Ano: $ano<br><br>
                 Preco: $preco<br><br>
+                <a href='formulario_editar.php?cod=$modelo'>
                 <button> ✏️Editar</button>
+                <a>
                 <a href='confirmar.php?cod=$modelo'>
                 <button> 🗑️Deletar</button>
                 </a>
