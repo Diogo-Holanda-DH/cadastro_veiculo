@@ -1,11 +1,11 @@
 <?php
 // deletar.php
-$codigo = $_GET['cod'];
+$placa = $_GET['cod'];
 include "verificar_logado.php";
 include "conexao.php";
 
 // 1º Passo - Comando SQL
-$sql = "DELETE FROM tb_veiculos WHERE id= '$codigo'";
+$sql = "DELETE FROM tb_veiculos WHERE placa= '$placa'";
 
 // 2º Passo - Preparar a conexão
 $deletar = $pdo->prepare($sql);

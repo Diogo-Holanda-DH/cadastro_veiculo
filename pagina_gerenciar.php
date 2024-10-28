@@ -29,7 +29,7 @@ $consultar = $pdo->prepare($sql);
 try{
    $consultar->execute();
    if($consultar->rowCount() == 0){
-    echo "Nenhum produto encontrado!";
+    echo "Nenhum veiculo encontrado!";
    }
    $resultados = $consultar->fetchAll(PDO::FETCH_ASSOC);
    foreach($resultados as $item){
@@ -40,14 +40,15 @@ try{
         
         echo "
             <div class='cartoes'>
+                Cod. Produto: $placa <br>
                 Modelo: $modelo <br>
                 Placa: $placa <br>
                 Ano: $ano<br><br>
                 Preco: $preco<br><br>
-                <a href='formulario_editar.php?cod=$modelo'>
+                <a href='formulario_editar.php?cod=$placa'>
                 <button> ✏️Editar</button>
                 <a>
-                <a href='confirmar.php?cod=$modelo'>
+                <a href='confirmar.php?cod=$placa'>
                 <button> 🗑️Deletar</button>
                 </a>
             </div>

@@ -2,10 +2,10 @@
  <?php
 include "verificar_logado.php";
 include "conexao.php";
-$codigo = $_GET['cod'];
+$placa = $_GET['cod'];
 
 // 1º Passo - Comando SQL
-$sql = "SELECT * FROM tb_veiculos WHERE id='$codigo'";
+$sql = "SELECT * FROM tb_veiculos WHERE placa='$placa'";
 
 // 2º Passo - Preparar a conexão
 $consultar = $pdo->prepare($sql);
